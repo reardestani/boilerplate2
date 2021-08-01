@@ -1,0 +1,2 @@
+# boilerplate
+WordPress boilerplate plugin
