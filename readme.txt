@@ -8,11 +8,11 @@ Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Empower ACF with more features.
+Descripiton.
 
 == Description ==
 
-Empower ACF with more features.
+Descripiton.
 
 == Changelog ==
 
