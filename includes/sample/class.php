@@ -2,7 +2,7 @@
 
 defined( 'ABSPATH' ) or die();
 
-class Boilerplate_Sample {
+class Layoutist_Core_Sample {
 
     public function __construct() {
         $this->add_hooks();
@@ -13,4 +13,4 @@ class Boilerplate_Sample {
     }
 }
 
-new Boilerplate_Sample();
+new Layoutist_Core_Sample();

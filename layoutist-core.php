@@ -1,17 +1,17 @@
 <?php
 /**
- * Plugin Name: Boilerplate
- * Description: Descripiton.
+ * Plugin Name: Layoutist Core
+ * Description: Core functionalities for layoutist.com
  * Version: 1.0.0
  * Author: WPizard
- * Text Domain: boilerplate
+ * Text Domain: layoutist-core
  */
 
 defined( 'ABSPATH' ) or die();
 
-if ( ! class_exists( 'Boilerplate' ) ) {
+if ( ! class_exists( 'Layoutist_Core' ) ) {
 
-    class Boilerplate {
+    class Layoutist_Core {
 
         private static $version;
 
@@ -29,7 +29,7 @@ if ( ! class_exists( 'Boilerplate' ) ) {
         }
 
         protected function define_constants() {
-            $plugin_data = get_file_data( __FILE__, [ 'Plugin Name', 'Version' ], 'boilerplate' );
+            $plugin_data = get_file_data( __FILE__, [ 'Plugin Name', 'Version' ], 'layoutist-core' );
 
             self::$plugin_basename = plugin_basename( __FILE__ );
             self::$plugin_name = array_shift( $plugin_data );
@@ -43,13 +43,13 @@ if ( ! class_exists( 'Boilerplate' ) ) {
         }
 
         public function init() {
-            load_plugin_textdomain( 'boilerplate', false, $this->plugin_dir() . '/languages' );
+            load_plugin_textdomain( 'layoutist-core', false, $this->plugin_dir() . '/languages' );
 
             $this->load_files( [
                 'sample/class',
             ] );
 
-            do_action( 'boilerplate_init', $this );
+            do_action( 'layoutist_core_init', $this );
         }
 
         public function version() {
@@ -65,13 +65,13 @@ if ( ! class_exists( 'Boilerplate' ) ) {
         }
 
         public function plugin_dir() {
-            $plugin_dir = apply_filters( 'boilerplate_plugin_dir', self::$plugin_dir );
+            $plugin_dir = apply_filters( 'layoutist_core_plugin_dir', self::$plugin_dir );
 
             return $plugin_dir;
         }
 
         public function plugin_url() {
-            $plugin_url = apply_filters( 'boilerplate_plugin_url', self::$plugin_url );
+            $plugin_url = apply_filters( 'layoutist_core_plugin_url', self::$plugin_url );
 
             return $plugin_url;
         }
@@ -101,8 +101,8 @@ if ( ! class_exists( 'Boilerplate' ) ) {
     }
 }
 
-function boilerplate() {
-    return new Boilerplate();
+function layoutist_core() {
+    return new Layoutist_Core();
 }
 
-boilerplate();
+layoutist_core();

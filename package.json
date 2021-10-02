@@ -1,5 +1,5 @@
 {
-    "name": "boilerplate",
+    "name": "layoutist-core",
     "version": "1.0.0",
     "postcss": {
         "plugins": {
@@ -14,13 +14,13 @@
         "plugins": []
     },
     "scripts": {
-        "clean": "rimraf assets/dist boilerplate boilerplate.zip",
-        "pot": "wp-pot --domain 'boilerplate' --package 'Boilerplate' --dest-file 'languages/boilerplate.pot' --src '**/*.php'",
+        "clean": "rimraf assets/dist layoutist-core layoutist-core.zip",
+        "pot": "wp-pot --domain 'layoutist-core' --package 'Layoutist Core' --dest-file 'languages/layoutist-core.pot' --src '**/*.php'",
         "build:css": "postcss assets/css/**/[!_]*.css --dir assets/dist/css",
         "build:js": "babel assets/js/**/[!_]*.js -d assets/dist/js",
         "build": "npm run clean",
-        "copy": "copyfiles 'languages/*' 'assets/dist/**/*' 'assets/lib/**/*' 'includes/**/*' boilerplate.php readme.txt boilerplate",
-        "zip": "zip-build --build-dir 'boilerplate' --zip-dir '.' --template '%NAME%.%EXT%'",
+        "copy": "copyfiles 'languages/*' 'assets/dist/**/*' 'assets/lib/**/*' 'includes/**/*' layoutist-core.php readme.txt layoutist-core",
+        "zip": "zip-build --build-dir 'layoutist-core' --zip-dir '.' --template '%NAME%.%EXT%'",
         "release": "npm run build && npm run pot && npm run copy"
     },
     "devDependencies": {

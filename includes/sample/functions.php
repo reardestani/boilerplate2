@@ -1,5 +1,5 @@
 <?php
 
-function boilerplate_sample() {
+function layoutist_core_sample() {
     echo 'Hello world';
 }
